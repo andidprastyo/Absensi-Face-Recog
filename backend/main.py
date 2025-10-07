@@ -230,7 +230,7 @@ async def get_monthly_attendance(year: int, month: int):
 # --- Main Runner ---
 def open_browser():
     time.sleep(2)
-    webbrowser.open_new_tab("http://127.0.0.1:8000")
+    webbrowser.open_new_tab("http://172.28.101.82:8000")
 
 if __name__ == "__main__":
     Timer(1, open_browser).start()
