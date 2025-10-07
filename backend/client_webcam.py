@@ -4,7 +4,7 @@ import time
 import os
 import pygame
 
-SERVER_URL = "http://172.28.101.82:8000/recognize"
+SERVER_URL = "http://172.26.96.1:8000/recognize"
 AUDIO_DIR = os.path.join(os.path.dirname(__file__), 'generated_audio')
 
 def play_audio(track_id: str):

@@ -17,6 +17,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from backend.utils import extract_face_features
 
 DATASET_DIR = PROJECT_ROOT / "data" / "dataset"
+CACHE_DIR = PROJECT_ROOT / "data" / "cache"
 MODEL_DIR = PROJECT_ROOT / "backend" / "model"
 AUDIO_FILES_DIR = PROJECT_ROOT / "backend" / "generated_audio"
 DB_PATH = PROJECT_ROOT / "backend" / "attendance.db"
