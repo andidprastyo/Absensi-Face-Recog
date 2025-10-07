@@ -4,7 +4,7 @@ import time
 import os
 import pygame
 
-SERVER_URL = "http://127.0.0.1:8000/recognize"
+SERVER_URL = "http://172.28.101.82:8000/recognize"
 AUDIO_DIR = os.path.join(os.path.dirname(__file__), 'generated_audio')
 
 def play_audio(track_id: str):
@@ -42,7 +42,7 @@ def run_webcam_attendance():
             
             print("✈️ Mengirim gambar ke server...")
             try:
-                response = requests.post(SERVER_URL, data=image_bytes.tobytes(), headers={'Content-Type': 'image/jpeg'}, timeout=15)
+                response = requests.post(SERVER_URL, data=image_bytes.tobytes(), headers={'Content-Type': 'image/jpeg'}, timeout=60)
                 if response.status_code == 200:
                     result = response.json()
                     print(f"✅ [{result.get('status', '').upper()}] Server: {result.get('message', 'N/A')}")
